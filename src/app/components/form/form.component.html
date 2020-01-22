@@ -1,0 +1,19 @@
+<form class = "tp-form" [formGroup]="formUserGroup" (ngSubmit)="onSubmit()">        
+    <mat-form-field class = "tp-full-width">
+       <input matInput placeholder = "Insert your name" formControlName = "name">      
+        <mat-error *ngIf="f.name.errors && (f.name.dirty || f.name.touched)">
+            <div *ngIf="f.name.errors.required">
+                Name is <strong>required</strong>
+            </div>
+        </mat-error>
+    </mat-form-field>
+    <mat-form-field class = "tp-full-width">
+        <input matInput placeholder = "Insert your job" formControlName = "job">         
+        <mat-error *ngIf="f.job.errors && (f.job.dirty || f.job.touched)">
+           <div *ngIf="f.job.errors.required">
+                Job is <strong>required</strong>
+           </div>
+        </mat-error>
+     </mat-form-field>
+     <button type="submit" mat-button [disabled]="formUserGroup.invalid">Save</button>
+ </form>
