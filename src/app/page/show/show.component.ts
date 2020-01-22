@@ -8,10 +8,10 @@ import {PageEvent} from '@angular/material/paginator';
 })
 export class ShowComponent implements OnInit {
   pageEvent:PageEvent;
-  
+
   constructor() { }
 
-  ngOnInit() {
+  ngOnInit() {    
   }
 
 }

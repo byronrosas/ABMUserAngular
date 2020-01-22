@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -13,6 +14,7 @@ import { CreateComponent } from './page/create/create.component';
 import { ShowComponent } from './page/show/show.component';
 import { EditComponent } from './page/edit/edit.component';
 import { AboutComponent } from './page/about/about.component';
+import { DetailComponent } from './components/detail/detail.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,7 @@ import { AboutComponent } from './page/about/about.component';
     FormComponent,
     CreateComponent,
     ShowComponent,    
-    EditComponent, AboutComponent,
+    EditComponent, AboutComponent, DetailComponent,
   ],
   imports: [
     BrowserModule,
@@ -37,7 +39,8 @@ import { AboutComponent } from './page/about/about.component';
     MatListModule,
     MatCardModule,
     MatButtonModule,
-    MatGridListModule,    
+    MatGridListModule, 
+    HttpClientModule,   
   ],
   providers: [],
   bootstrap: [AppComponent]

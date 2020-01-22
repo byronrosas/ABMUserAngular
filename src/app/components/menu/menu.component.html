@@ -1,17 +1,18 @@
-
 <mat-sidenav-container class = "menu-container">
-    <mat-sidenav mode = "side" opened>
-       <section class = "menu-section">
-          <span><a routerLink="/list" routerLinkActive="active">Listar</a></span>
+   <mat-sidenav mode = "side" class="side-nav" opened>
+      <section class = "menu-section">
+         <span><a routerLink="/show" routerLinkActive="active">List</a></span>
+      </section>
+      <section class = "menu-section">
+        <span><a routerLink="/create" routerLinkActive="active">Create</a></span>
        </section>
-       <section class = "menu-section">
-         <span><a routerLink="/create" routerLinkActive="active">Crear</a></span>
-        </section>
-       <section class = "menu-section">
-         <span><a routerLink="/about" routerLinkActive="active">Acerca de</a></span>
-       </section>
-    </mat-sidenav>
-    <mat-sidenav-content>
-        <router-outlet></router-outlet>        
-    </mat-sidenav-content>
- </mat-sidenav-container>
+      <section class = "menu-section">
+        <span><a routerLink="/about" routerLinkActive="active">About us</a></span>
+      </section>
+   </mat-sidenav>
+   <mat-sidenav-content>      
+      <div class="contain">
+         <router-outlet></router-outlet>        
+      </div>       
+   </mat-sidenav-content>
+</mat-sidenav-container>

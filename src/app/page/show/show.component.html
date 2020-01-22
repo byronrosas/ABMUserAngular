@@ -1,6 +1,8 @@
+<h1>List Users</h1>
 <mat-paginator [length] = "12"
    [pageSize] = "6"
-   [pageSizeOptions] = "[3, 6]"
+   [pageSizeOptions] = "[6]"
    (page) = "pageEvent = $event">
-</mat-paginator>
-<app-list [page]="pageEvent.pageIndex"></app-list>
+</mat-paginator>  
+{{pageEvent != undefined ? pageEvent.pageIndex+1 : ''}} 
+<app-list [page]="pageEvent != undefined ? pageEvent.pageIndex+1 : ''"></app-list>

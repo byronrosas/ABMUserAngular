@@ -6,3 +6,21 @@
 .tp-full-width {
   width: 100%;
 }
+.success {
+  background-color: cornflowerblue;
+}
+.err {
+  background-color: crimson;
+}
+.frm-center {
+  margin: 0px auto;
+  width: max-content;
+  background-color: #eee;
+  padding: 10px;
+}
+input {
+  color: black;
+}
+button {
+  color: indigo;
+}

@@ -1,4 +1,5 @@
 export class UserRequest{
-    name:String;
-    job:String;
+    id?:number;
+    name:string;
+    job:string;
 }

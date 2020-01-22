@@ -1,5 +1,5 @@
-<ul>
-    <li *ngFor="let user of users">
-        <app-item></app-item>
+<ul class="list">
+    <li *ngFor="let user of users;let i=index">
+        <app-item [user]="user" (eventDelete)="eventDeleteItem(i,$event)"></app-item>
     </li>
 </ul>

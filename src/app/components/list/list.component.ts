@@ -1,5 +1,6 @@
+import { UserPage } from './../../models/user-page';
 import { UserService } from './../../services/user.service';
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, SimpleChanges } from '@angular/core';
 import { User } from 'src/app/models';
 
 @Component({
@@ -7,20 +8,38 @@ import { User } from 'src/app/models';
   templateUrl: './list.component.html',
   styleUrls: ['./list.component.scss']
 })
-export class ListComponent implements OnInit {  
-  @Input() page:number;
-  
-  public users:User[]=[];
+export class ListComponent implements OnInit {
+  @Input() page?: number;
 
-  constructor(public _userService:UserService) {}
+  public users: User[] = [];
+
+  constructor(public _userService: UserService) { }
+
+  // page change in pagination
+  ngOnChanges(changes) {
+    const _page: SimpleChanges = changes.page;
+    if (_page.currentValue != undefined) {
+      //  get list user by page
+      this.getUsers(_page.currentValue);
+    }
+  }
 
   ngOnInit() {
-    this._userService.get(this.page)
-    .subscribe((res:any)=>{
-      console.log(res);
-    },(err)=>{
-      console.log(err);
-    });    
+  }
+
+  // get list users by page
+  getUsers(page) {
+    this._userService.get(page)
+      .subscribe((res: UserPage) => {
+        this.users = res.data;
+      }, (err) => {
+        console.log(err);
+      });
+  }
+
+  // event delete item
+  eventDeleteItem(index,e) {
+    this.users.splice(index,1);
   }
 
 }

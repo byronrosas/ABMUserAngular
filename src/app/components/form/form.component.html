@@ -1,4 +1,4 @@
-<form class = "tp-form" [formGroup]="formUserGroup" (ngSubmit)="onSubmit()">        
+<form class = "tp-form frm-center" [formGroup]="formUserGroup" (ngSubmit)="onSubmit()">        
     <mat-form-field class = "tp-full-width">
        <input matInput placeholder = "Insert your name" formControlName = "name">      
         <mat-error *ngIf="f.name.errors && (f.name.dirty || f.name.touched)">
@@ -17,3 +17,6 @@
      </mat-form-field>
      <button type="submit" mat-button [disabled]="formUserGroup.invalid">Save</button>
  </form>
+ <mat-card class="success" *ngIf="isSave && !isErr">Save Success :)</mat-card>
+ <mat-card class="success" *ngIf="isUpdate && !isErr">Update Success :)</mat-card>
+<mat-card class="err" *ngIf="isErr">Error :(</mat-card>

@@ -1,0 +1,8 @@
+.list {
+  margin: 0px auto;
+  list-style: none;
+  width: max-content;
+}
+.list > li {
+  margin: 5px;
+}

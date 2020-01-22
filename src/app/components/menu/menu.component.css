@@ -1,15 +1,27 @@
-.tp-container {
+.menu-container {
   position: absolute;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
-  background: #eee;
+  background-color: indigo;
+  color: white;
 }
-.tp-section {
+.side-nav {
+  background-color: blueviolet;
+}
+a {
+  color: white;
+}
+.menu-section {
   display: flex;
   align-content: center;
   align-items: center;
   height: 60px;
-  width: 100px;
+  width: 130px;
+  padding: 4px;
+}
+.contain {
+  height: 100vh;
+  padding: 20px;
 }
