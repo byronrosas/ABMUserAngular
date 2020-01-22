@@ -2,17 +2,16 @@
 <mat-sidenav-container class = "menu-container">
     <mat-sidenav mode = "side" opened>
        <section class = "menu-section">
-          <span>Crear</span>
+          <span><a routerLink="/list" routerLinkActive="active">Listar</a></span>
        </section>
        <section class = "menu-section">
-        <span>Listar</span>
+         <span><a routerLink="/create" routerLinkActive="active">Crear</a></span>
         </section>
        <section class = "menu-section">
-          <span>Editar</span>
+         <span><a routerLink="/about" routerLinkActive="active">Acerca de</a></span>
        </section>
     </mat-sidenav>
     <mat-sidenav-content>
-        <!-- <router-outlet></router-outlet> -->
-        <app-show></app-show>
+        <router-outlet></router-outlet>        
     </mat-sidenav-content>
  </mat-sidenav-container>

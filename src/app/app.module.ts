@@ -11,8 +11,8 @@ import { ListComponent } from './components/list/list.component';
 import { FormComponent } from './components/form/form.component';
 import { CreateComponent } from './page/create/create.component';
 import { ShowComponent } from './page/show/show.component';
-import { DetailComponent } from './page/detail/detail.component';
-import { EditComponent } from './page/edit/edit.component'
+import { EditComponent } from './page/edit/edit.component';
+import { AboutComponent } from './page/about/about.component';
 
 @NgModule({
   declarations: [
@@ -22,9 +22,8 @@ import { EditComponent } from './page/edit/edit.component'
     ListComponent,
     FormComponent,
     CreateComponent,
-    ShowComponent,
-    DetailComponent,
-    EditComponent
+    ShowComponent,    
+    EditComponent, AboutComponent,
   ],
   imports: [
     BrowserModule,

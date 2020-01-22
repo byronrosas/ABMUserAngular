@@ -9,7 +9,7 @@ import { User } from 'src/app/models';
 })
 export class ListComponent implements OnInit {  
   @Input() page:number;
-
+  
   public users:User[]=[];
 
   constructor(public _userService:UserService) {}
